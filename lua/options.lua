@@ -7,6 +7,10 @@ local options = {
     tabstop = 4,
     softtabstop = 4,
     shiftwidth = 4,
+    ignorecase = true,
+    smartcase = true,
+    smartindent = true,
+    smarttab = true,
     expandtab = true,
     incsearch = true,
     autoindent = true,
@@ -15,7 +19,15 @@ local options = {
     swapfile = false,
     clipboard = "unnamedplus",
     laststatus = 2,
-    showmode = off
+    showmode = off,
+    conceallevel = 0,
+    cmdheight = 1,
+    showmode = false,
+    showtabline = 2,
+    termguicolors = true,
+    splitbelow = true,
+    splitright = true,
+    mouse = "a"
 }
 
 for k, v in pairs(options) do
