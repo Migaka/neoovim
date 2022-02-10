@@ -11,37 +11,37 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- kj to normal mode
-keymap("ii", "<Esc>")
+keymap("i", "ii", "<Esc>", opts)
 
 -- Save with Ctrl + S
-keymap("<C-s>", ":w<CR>")
+keymap("i", "<C-s>", ":w<CR>", opts)
 
 -- Close buffer
-keymap("<C-c>", ":q<CR>")
+keymap("n", "<C-c>", ":q<CR>", opts)
 
 -- Move around windows
-keymap("<C-h>", "<C-w>h")
-keymap("<C-j>", "<C-w>j")
-keymap("<C-k>", "<C-w>k")
-keymap("<C-l>", "<C-w>l")
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Splits
-keymap("<leader>ws", ":split<CR>")
-keymap("<leader>vs", ":vsplit<CR>")
+keymap("n", "<leader>ws", ":split<CR>", opts)
+keymap("n", "<leader>vs", ":vsplit<CR>", opts)
 
 -- Delete buffer
-keymap("<A-w>", ":bd<CR>")
+keymap("n", "<A-w>", ":bd<CR>", opts)
 
 -- Yank to end of line
-keymap("Y", "y$")
+keymap("n", "Y", "y$", opts)
 
 -- Copy to system clippboard
-keymap("<leader>y", '"+y')
-keymap("<leader>y", '"+y')
+keymap("n", "<leader>y", '"+y', opts)
+keymap("n", "<leader>y", '"+y', opts)
 
 -- Paste from system clippboard
-keymap("<leader>p", '"+p')
-keymap("<leader>p", '"+p')
+keymap("n", "<leader>p", '"+p', opts)
+keymap("n", "<leader>p", '"+p', opts)
 
 -- Clear highlight search
-keymap("<leader>nh", ":nohlsearch<CR>")
+keymap("n", "<leader>nh", ":nohlsearch<CR>", opts)
