@@ -7,6 +7,7 @@ catch /^Vim\%((\a\+)\)\=:E185/
 endtry
 ]]
 
+-- LuaLine --
 require('lualine').setup {
     options = {
       icons_enabled = true,
