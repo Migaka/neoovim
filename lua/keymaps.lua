@@ -1,39 +1,47 @@
+local opts = { noremap = true, silent = true }
+
+local term_opts = { silent = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+--Remap space as leader key
+keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- kj to normal mode
-inoremap("kj", "<Esc>")
+keymap("ii", "<Esc>")
 
 -- Save with Ctrl + S
-nnoremap("<C-s>", ":w<CR>")
+keymap("<C-s>", ":w<CR>")
 
 -- Close buffer
-nnoremap("<C-c>", ":q<CR>")
+keymap("<C-c>", ":q<CR>")
 
 -- Move around windows
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-l>", "<C-w>l")
+keymap("<C-h>", "<C-w>h")
+keymap("<C-j>", "<C-w>j")
+keymap("<C-k>", "<C-w>k")
+keymap("<C-l>", "<C-w>l")
 
 -- Splits
-nnoremap("<leader>ws", ":split<CR>")
-nnoremap("<leader>vs", ":vsplit<CR>")
+keymap("<leader>ws", ":split<CR>")
+keymap("<leader>vs", ":vsplit<CR>")
 
 -- Delete buffer
-nnoremap("<A-w>", ":bd<CR>")
+keymap("<A-w>", ":bd<CR>")
 
 -- Yank to end of line
-nnoremap("Y", "y$")
+keymap("Y", "y$")
 
 -- Copy to system clippboard
-nnoremap("<leader>y", '"+y')
-vnoremap("<leader>y", '"+y')
+keymap("<leader>y", '"+y')
+keymap("<leader>y", '"+y')
 
 -- Paste from system clippboard
-nnoremap("<leader>p", '"+p')
-vnoremap("<leader>p", '"+p')
+keymap("<leader>p", '"+p')
+keymap("<leader>p", '"+p')
 
 -- Clear highlight search
-nnoremap("<leader>nh", ":nohlsearch<CR>")
-vnoremap("<leader>nh", ":nohlsearch<CR>")
+keymap("<leader>nh", ":nohlsearch<CR>")
