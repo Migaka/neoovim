@@ -37,10 +37,8 @@ keymap("n", "Y", "y$", opts)
 
 -- Copy to system clippboard
 keymap("n", "<leader>y", '"+y', opts)
-keymap("n", "<leader>y", '"+y', opts)
 
 -- Paste from system clippboard
-keymap("n", "<leader>p", '"+p', opts)
 keymap("n", "<leader>p", '"+p', opts)
 
 -- Clear highlight search
