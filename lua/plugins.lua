@@ -14,15 +14,19 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 return require('packer').startup(function()
-
+-- Packer
     use 'wbthomason/packer.nvim'
+
+-- Theming
     use {"catppuccin/nvim",
       as = "catppuccin"
     }
     use {'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    --[[
+--]]
+
+--[[
     use {
       "startup-nvim/startup.nvim",
       requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
@@ -30,7 +34,15 @@ return require('packer').startup(function()
         require"startup".setup()
       end
     }
-    --]]
-    use "williamboman/nvim-lsp-installer"
+--]]
+
+-- Discord presence
+    use 'andweeb/presence.nvim'
+
+-- Completion and lsp
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
+--]]
+
 end)

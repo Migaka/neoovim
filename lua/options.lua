@@ -37,13 +37,18 @@ for k, v in pairs(options) do
   vim.cmd "set whichwrap+=<,>,[,],h,l"
   vim.cmd [[set iskeyword+=-]]
 
-require("nvim-lsp-installer").setup({
-    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+require("mason").setup({
     ui = {
         icons = {
-            server_installed = "✓",
-            server_pending = "➜",
-            server_uninstalled = "✗"
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
         }
     }
 })
+
+require("mason-lspconfig").setup({
+    ensure_installed = { "html-lsp" }
+})
+
+
