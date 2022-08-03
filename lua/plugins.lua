@@ -37,7 +37,7 @@ return require('packer').startup(function()
 --]]
 
 -- Discord presence
-    use 'andweeb/presence.nvim'
+--    use 'andweeb/presence.nvim'
 
 -- Completion and lsp
     use 'williamboman/mason.nvim'
