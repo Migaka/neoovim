@@ -10,7 +10,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- kj to normal mode
+-- ii  to normal mode
 keymap("i", "ii", "<Esc>", opts)
 
 -- Save with Ctrl + S

@@ -22,6 +22,7 @@ return require('packer').startup(function()
     use {'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    --[[
     use {
       "startup-nvim/startup.nvim",
       requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
@@ -29,5 +30,7 @@ return require('packer').startup(function()
         require"startup".setup()
       end
     }
-
+    --]]
+    use "williamboman/nvim-lsp-installer"
+    use 'neovim/nvim-lspconfig'
 end)
