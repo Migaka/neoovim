@@ -37,12 +37,14 @@ return require('packer').startup(function()
 --]]
 
 -- Discord presence
---    use 'andweeb/presence.nvim'
+    use 'andweeb/presence.nvim'
 
 -- Completion and lsp
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
+    use 'mfussenegger/nvim-lint'
+    use 'mhartington/formatter.nvim'
 --]]
 
 end)
