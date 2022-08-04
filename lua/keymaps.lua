@@ -43,3 +43,5 @@ keymap("n", "<leader>p", '"+p', opts)
 
 -- Clear highlight search
 keymap("n", "<leader>nh", ":nohlsearch<CR>", opts)
+
+

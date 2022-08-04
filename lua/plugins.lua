@@ -29,12 +29,16 @@ return require('packer').startup(function()
 --[[
     use {
       "startup-nvim/startup.nvim",
-      requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+      requires = { "nvim-lua/plenary.nvim" },
       config = function()
         require"startup".setup()
       end
     }
 --]]
+
+-- Telescope
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-lua/plenary.nvim'
 
 -- Discord presence
     use 'andweeb/presence.nvim'
