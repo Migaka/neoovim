@@ -108,4 +108,21 @@ require('telescope').setup{
     -- please take a look at the readme of the extension you want to configure
   }
 }
-
+-- Nvim-tree-lua
+require("nvim-tree").setup({
+sort_by = "case_sensitive",
+view = {
+  width = 28,
+  mappings = {
+    list = {
+      { key = "u", action = "dir_up" },
+    },
+  },
+},
+renderer = {
+  group_empty = true,
+},
+filters = {
+  dotfiles = true,
+},
+})

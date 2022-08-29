@@ -18,21 +18,19 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
 -- Theming
-    use {"catppuccin/nvim",
-      as = "catppuccin"
-    }
+    use 'Mofiqul/dracula.nvim' -- Colorscheme
     use {'nvim-lualine/lualine.nvim',
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use {'akinsho/bufferline.nvim', tag = "v2.*"}
 --]]
 
---[[
+-- Startup-nvim
     use {
-      "startup-nvim/startup.nvim",
-      requires = { "nvim-lua/plenary.nvim" },
-      config = function()
-        require"startup".setup()
-      end
+        'startup-nvim/startup.nvim',
+        config = function()
+            require"startup".setup()
+        end
     }
 --]]
 
@@ -49,6 +47,15 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'mfussenegger/nvim-lint'
     use 'mhartington/formatter.nvim'
+--]]
+-- Neovim-tree lua
+use {
+  'kyazdani42/nvim-tree.lua',
+  requires = {
+    'kyazdani42/nvim-web-devicons', -- optional, for file icons
+  },
+  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+}
 --]]
 
 end)

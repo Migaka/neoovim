@@ -44,4 +44,6 @@ keymap("n", "<leader>p", '"+p', opts)
 -- Clear highlight search
 keymap("n", "<leader>nh", ":nohlsearch<CR>", opts)
 
-
+-- Custom
+keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
+keymap("n", "<leader>tt", ":NvimTreeToggle<CR>", opts)
